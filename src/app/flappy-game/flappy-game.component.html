@@ -1,0 +1,26 @@
+<div class="game-container" *ngIf="isGameRunning; else startScreen">
+  <div class="bird" [style.top.px]="birdYPosition"></div>
+
+  <div
+    *ngFor="let pipe of pipes"
+    class="pipe top-pipe"
+    [style.left.px]="pipe.x"
+    [style.height.px]="pipe.y"
+  ></div>
+
+  <div
+    *ngFor="let pipe of pipes"
+    class="pipe bottom-pipe"
+    [style.left.px]="pipe.x"
+    [style.top.px]="pipe.y + 100"
+  ></div>
+
+  <div class="score">Score: {{ score }}</div>
+</div>
+
+<ng-template #startScreen>
+  <div class="start-screen" >
+    <h1 style="color:green;">Flappy Bird</h1>
+    <p>Press Space to Start</p>
+  </div>
+</ng-template>

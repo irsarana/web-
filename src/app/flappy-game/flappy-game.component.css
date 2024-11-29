@@ -1,0 +1,59 @@
+.game-container {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  background-image: url('/assets/images/background.png'); /* Update this path */
+  background-size: cover;
+  overflow: hidden;
+  border: 2px solid #000;
+  margin: 0 auto;
+}
+
+.bird {
+  position: absolute;
+  left: 100px;
+  width: 40px; /* Adjust size according to your bird image */
+  height: 30px; /* Adjust size according to your bird image */
+  background-image: url('/assets/images/bird.png'); /* Path to your bird image */
+  background-size: cover; /* Ensure the image covers the entire div */
+}
+
+.pipe {
+  position: absolute;
+  width: 50px;
+  background-color: green;
+}
+
+.top-pipe {
+  top: 0;
+}
+
+.bottom-pipe {
+  bottom: 0;
+}
+
+.score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  color: rgb(6, 3, 3);
+}
+
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.start-screen h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.start-screen p {
+  font-size: 18px;
+  color: #333;
+}
